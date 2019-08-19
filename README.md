@@ -1,5 +1,4 @@
 Scala-playground
-====
+===
 
-### TODO
-- travis-ci builds
+[![Actions Status](https://github.com/pawelhenek/scala-playground/workflows/sbt/badge.svg)](https://github.com/pawelhenek/scala-playground/actions)

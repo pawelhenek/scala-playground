@@ -1,0 +1,21 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: First step, say hello
+        run: echo Hello, world!
+      - name: Intalling sdkman
+        run: curl -s "https://get.sdkman.io" | bash
+      - name: Enabling sdkman in terminal
+        run: source "$HOME/.sdkman/bin/sdkman-init.sh"
+      - name: Installing sbt
+        run: sdk install sbt
+      - name: Performing tests
+        run: sbt test
