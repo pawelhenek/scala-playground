@@ -1,4 +1,4 @@
-name: CI
+name: Checking if everything is okay
 
 on: [push]
 
@@ -15,6 +15,9 @@ jobs:
 
       - name: Enabling sdkman in terminal
         run: source "/home/runner/.sdkman/bin/sdkman-init.sh"
+
+      - name: Sdk version
+        run: sdk version
 
       - name: Installing sbt
         run: sdk install sbt
