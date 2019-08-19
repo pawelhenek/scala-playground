@@ -14,7 +14,7 @@ jobs:
         run: curl -s "https://get.sdkman.io" | bash
 
       - name: Enabling sdkman in terminal
-        run: source "/home/runner/.sdkman/bin/sdkman-init.sh"
+        run: source "/home/runner/.sdkman/bin/sdkman-init.sh" && sdk version && sdk install sbt && sbt test
 
       - name: Sdk version
         run: sdk version
