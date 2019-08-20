@@ -11,5 +11,5 @@ jobs:
       - uses: actions/checkout@v1
       - name: Intalling sdkman
         run: curl -s "https://get.sdkman.io" | bash
-      - name: Enabling sdkman in terminal
+      - name: Enabling sdkman in terminal and executing tests
         run: source "/home/runner/.sdkman/bin/sdkman-init.sh" && sdk version && sdk install sbt && sbt test
