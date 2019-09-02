@@ -3,7 +3,7 @@ package com.github.pawelhenek.scalaplayground.scalatest
 import collection.mutable.Stack
 import org.scalatest._
 
-class HelloScalaTestSpec extends FlatSpec with Matchers {
+class HelloScalaTestSpec extends SetFlatSpec with Matchers {
 
   "A Stack" should "pop values in last-in-first-out order" in {
     val stack = new Stack[Int]

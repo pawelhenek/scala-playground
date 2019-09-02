@@ -22,3 +22,13 @@ Installed sbt (recommended via https://www.scala-sbt.org/release/docs/Setup.html
 
 `Scala code runner version 2.12.7`
 
+##### What's next
+
+- scalamock
+- netty
+- sttp
+- slick
+- akka
+- spark
+- flink
+- kafka
