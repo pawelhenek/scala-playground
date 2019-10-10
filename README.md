@@ -27,6 +27,8 @@ Installed sbt (recommended via https://www.scala-sbt.org/release/docs/Setup.html
 - scalamock
 - scalatest
 - scalacheck
+- gatling
+- alpakka
 - netty
 - sttp
 - slick
@@ -34,3 +36,4 @@ Installed sbt (recommended via https://www.scala-sbt.org/release/docs/Setup.html
 - spark
 - flink
 - kafka
+- hadoop
