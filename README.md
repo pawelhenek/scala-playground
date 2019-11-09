@@ -24,16 +24,5 @@ Installed sbt (recommended via https://www.scala-sbt.org/release/docs/Setup.html
 
 #### What's next
 
-- scalamock
-- scalatest
-- scalacheck
-- gatling
-- alpakka
 - netty
-- sttp
-- slick
-- akka
-- spark
-- flink
-- kafka
-- hadoop
+- scalaz

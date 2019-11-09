@@ -19,14 +19,12 @@ lazy val global = project
 
 val scalaTest = "org.scalatest" %% "scalatest" % "3.0.5"
 val playJson = "com.typesafe.play" %% "play-json" % "2.6.9"
-val specs2 = "org.specs2" %% "specs2-core" % "4.6.0"
 val scalaCheck = "org.scalacheck" %% "scalacheck" % "1.14.0"
 
 lazy val languagePlayground = project
   .settings(
     name := "languagePlayground",
     libraryDependencies += playJson,
-    libraryDependencies += specs2 % Test,
     libraryDependencies += scalaCheck % Test,
     libraryDependencies += scalaTest % Test
   )

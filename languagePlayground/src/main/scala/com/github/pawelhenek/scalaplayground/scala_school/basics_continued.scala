@@ -1,7 +1,5 @@
 package com.github.pawelhenek.scalaplayground.scala_school
 
-import com.sun.xml.internal.ws.developer.ServerSideException
-
 object basics_continued extends App {
 
   class Foo {}
