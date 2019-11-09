@@ -13,5 +13,4 @@ class SetSuite extends FunSuite {
       Set.empty.head
     }
   }
-
 }

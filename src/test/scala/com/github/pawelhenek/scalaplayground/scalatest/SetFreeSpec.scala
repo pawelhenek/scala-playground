@@ -17,5 +17,4 @@ class SetFreeSpec extends FreeSpec {
       }
     }
   }
-
 }

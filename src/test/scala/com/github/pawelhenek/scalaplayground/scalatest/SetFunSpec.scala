@@ -18,5 +18,4 @@ class SetFunSpec extends FunSpec {
       }
     }
   }
-
 }

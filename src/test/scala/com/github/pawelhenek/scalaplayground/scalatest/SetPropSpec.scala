@@ -25,7 +25,4 @@ class SetPropSpec extends PropSpec with TableDrivenPropertyChecks with Matchers 
       a [NoSuchElementException] should be thrownBy { set.head }
     }
   }
-
-
-
 }

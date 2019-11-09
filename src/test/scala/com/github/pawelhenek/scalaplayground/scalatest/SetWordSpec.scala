@@ -17,5 +17,4 @@ class SetWordSpec extends WordSpec {
       }
     }
   }
-
 }

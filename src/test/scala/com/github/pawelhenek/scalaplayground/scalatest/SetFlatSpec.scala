@@ -13,5 +13,4 @@ class SetFlatSpec extends FlatSpec {
       Set.empty.head
     }
   }
-
 }

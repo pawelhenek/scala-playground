@@ -2,7 +2,6 @@ package com.github.pawelhenek.scalaplayground.scalatest
 
 import org.scalatest.{FeatureSpec, GivenWhenThen}
 
-
 class TVSet {
   private var on: Boolean = false
   def isOn: Boolean = on
@@ -46,6 +45,4 @@ class TvSetFeatureSpec extends FeatureSpec with GivenWhenThen {
       assert(!tv.isOn)
     }
   }
-
-
 }
