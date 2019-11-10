@@ -11,10 +11,11 @@ lazy val global = project
   .in(file("."))
   .aggregate(
       languagePlayground,
-      finagleExample,
-      akkaExample,
-      flinkExample,
-      sparkExample
+      finagleExamples,
+      akkaExamples,
+      flinkExamples,
+      sparkExamples,
+      macwireExamples
   )
 
 val scalaTest = "org.scalatest" %% "scalatest" % "3.0.5"
@@ -31,9 +32,9 @@ lazy val languagePlayground = project
 
 val finagleHttp = "com.twitter" %% "finagle-http" % "19.11.0"
 
-lazy val finagleExample = project
+lazy val finagleExamples = project
   .settings(
-    name := "finagleExample",
+    name := "finagleExamples",
     libraryDependencies += finagleHttp
   )
 
@@ -41,9 +42,9 @@ val akkaActor = "com.typesafe.akka" %% "akka-actor" % "2.5.13"
 val akkaStream = "com.typesafe.akka" %% "akka-stream" % "2.5.13"
 val akkaHttp = "com.typesafe.akka" %% "akka-http" % "10.1.3"
 
-lazy val akkaExample = project
+lazy val akkaExamples = project
   .settings(
-    name := "akkaExample",
+    name := "akkaExamples",
     libraryDependencies += akkaActor,
     libraryDependencies += akkaStream,
     libraryDependencies += akkaHttp
@@ -53,15 +54,28 @@ val flinkScala = "org.apache.flink" %% "flink-scala" % "1.9.1"
 val flinkClients = "org.apache.flink" %% "flink-clients" % "1.9.1"
 val flinkStreaming = "org.apache.flink" %% "flink-streaming-scala" % "1.9.1"
 
-lazy val flinkExample = project
+lazy val flinkExamples = project
   .settings(
-    name := "flinkExample",
+    name := "flinkExamples",
     libraryDependencies += flinkScala,
     libraryDependencies += flinkClients,
     libraryDependencies += flinkStreaming
   )
 
-lazy val sparkExample = project
+val sparkCore = "org.apache.spark" %% "spark-core" % "2.4.4"
+val sparkSql = "org.apache.spark" %% "spark-sql" % "2.4.4"
+
+lazy val sparkExamples = project
   .settings(
-    name := "sparkExample"
+    name := "sparkExamples",
+    libraryDependencies += sparkCore,
+    libraryDependencies += sparkSql
+  )
+
+val macwireMacros = "com.softwaremill.macwire" %% "macros" % "2.3.3"
+
+lazy val macwireExamples = project
+  .settings(
+    name := "macwireExamples",
+    libraryDependencies += macwireMacros
   )
