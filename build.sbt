@@ -15,8 +15,20 @@ lazy val global = project
       akkaExamples,
       flinkExamples,
       sparkExamples,
-      macwireExamples
+      macwireExamples,
+      gatlingExamples
   )
+
+val gatlingCharts = "io.gatling.highcharts" % "gatling-charts-highcharts" % "3.3.1" % Test
+val gatlingTest = "io.gatling" % "gatling-test-framework" % "3.3.1" % Test
+
+lazy val gatlingExamples = project
+  .settings(
+    name := "gatlingExamples"
+    ,libraryDependencies += gatlingCharts
+    ,libraryDependencies += gatlingTest
+  )
+  .enablePlugins(GatlingPlugin)
 
 val scalaTest = "org.scalatest" %% "scalatest" % "3.0.5"
 val playJson = "com.typesafe.play" %% "play-json" % "2.6.9"
