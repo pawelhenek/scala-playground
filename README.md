@@ -1,4 +1,4 @@
-Scala-playground
+Scala playground
 ===
 
 ![Actions status](https://action-badges.now.sh/pawelhenek/scala-playground)
@@ -26,3 +26,5 @@ Installed sbt (recommended via https://www.scala-sbt.org/release/docs/Setup.html
 
 - netty
 - scalaz
+- monix
+- catz

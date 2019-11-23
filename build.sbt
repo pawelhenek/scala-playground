@@ -7,6 +7,8 @@ version := "0.0.1"
 libraryDependencies ++= Seq()
 scalacOptions in Test ++= Seq("-Yrangepos")
 
+resolvers += "REPO MAVEN CENTRAL" at "https://repo1.maven.org/maven2"
+
 lazy val global = project
   .in(file("."))
   .aggregate(
@@ -16,7 +18,41 @@ lazy val global = project
       flinkExamples,
       sparkExamples,
       macwireExamples,
-      gatlingExamples
+      gatlingExamples,
+      alpakkaExamples
+  )
+
+val scalaTest = "org.scalatest" %% "scalatest" % "3.0.5"
+
+val alpakkaFile = "com.lightbend.akka" %% "akka-stream-alpakka-file" % "1.1.2"
+val alpakkaFtp = "com.lightbend.akka" %% "akka-stream-alpakka-ftp" % "1.1.2"
+
+val akkaSlf4j = "com.typesafe.akka"  %% "akka-slf4j" % "2.5.13"
+
+val apacheFtpServerCore = "org.apache.ftpserver" % "ftpserver-core" % "1.1.1"
+val apacheFtpServer = "org.apache.ftpserver" % "ftpserver" % "1.1.1"
+
+val googleJimfs = "com.google.jimfs" % "jimfs" % "1.1"
+
+val sshd = "org.apache.sshd" % "sshd" % "1.7.0"
+val sshdCore = "org.apache.sshd" % "sshd-core" % "1.7.0"
+
+val akkaKafka = "com.typesafe.akka" %% "akka-stream-kafka" % "1.1.0"
+
+lazy val alpakkaExamples = project
+  .settings(
+    name := "alpakkaExamples",
+    libraryDependencies += alpakkaFile,
+    libraryDependencies += alpakkaFtp,
+    libraryDependencies += apacheFtpServer,
+    libraryDependencies += apacheFtpServerCore,
+    libraryDependencies += googleJimfs,
+    libraryDependencies += sshd,
+    libraryDependencies += sshdCore,
+    libraryDependencies += scalaTest % Test,
+    libraryDependencies += akkaKafka % Test,
+    libraryDependencies += akkaActor,
+    libraryDependencies += akkaSlf4j
   )
 
 val gatlingCharts = "io.gatling.highcharts" % "gatling-charts-highcharts" % "3.3.1" % Test
@@ -24,13 +60,13 @@ val gatlingTest = "io.gatling" % "gatling-test-framework" % "3.3.1" % Test
 
 lazy val gatlingExamples = project
   .settings(
-    name := "gatlingExamples"
-    ,libraryDependencies += gatlingCharts
-    ,libraryDependencies += gatlingTest
+    name := "gatlingExamples",
+    libraryDependencies += gatlingCharts,
+    libraryDependencies += gatlingTest
   )
   .enablePlugins(GatlingPlugin)
 
-val scalaTest = "org.scalatest" %% "scalatest" % "3.0.5"
+
 val playJson = "com.typesafe.play" %% "play-json" % "2.6.9"
 val scalaCheck = "org.scalacheck" %% "scalacheck" % "1.14.0"
 
