@@ -121,9 +121,11 @@ lazy val sparkExamples = project
   )
 
 val macwireMacros = "com.softwaremill.macwire" %% "macros" % "2.3.3"
+val specs2 = "org.specs2" %% "specs2-core" % "4.8.1" % Test
 
 lazy val macwireExamples = project
   .settings(
     name := "macwireExamples",
-    libraryDependencies += macwireMacros
+    libraryDependencies += macwireMacros,
+    libraryDependencies += specs2
   )
