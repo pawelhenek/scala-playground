@@ -2,7 +2,6 @@ Scala playground
 ===
 
 ![Actions status](https://action-badges.now.sh/pawelhenek/scala-playground)
-![Actions status](http://aliyunfc.tarocch1.com/github-actions-badge/pawelhenek/scala-playground)
 
 #### Prerequisities
 
@@ -24,7 +23,27 @@ Installed sbt (recommended via https://www.scala-sbt.org/release/docs/Setup.html
 
 #### What's next
 
+- play framework
 - netty
+- cats
 - scalaz
 - monix
 - catz
+- dotty
+- doobie
+- elastic4s
+- kafka
+- quill
+- slick
+- scalding
+- rediscala
+- reactiveMongo
+- fs2
+- zio
+- scala 2.13
+- scala 3
+- storm
+- flink
+- spark
+- hadoop
+- tapir
