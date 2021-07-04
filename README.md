@@ -47,3 +47,5 @@ Installed sbt (recommended via https://www.scala-sbt.org/release/docs/Setup.html
 - spark
 - hadoop
 - tapir
+- picocli
+- ammonite
